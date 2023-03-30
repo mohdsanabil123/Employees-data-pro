@@ -123,6 +123,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#for csrf_verification
 CSRF_TRUSTED_ORIGINS = [
     'https://employees-data-project.up.railway.app/'
 ]
+
+CSRF_COOKIE_DOMAIN = 'https://employees-data-project.up.railway.app/'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
